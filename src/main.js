@@ -102,10 +102,21 @@
 // const msg1 = `私の名前は${name}です。年齢は${age}です。`;
 // console.log(msg1);
 
-const myProfile = ["ももたろう", 25];
+// const myProfile = ["ももたろう", 25];
 // const msg2 = `私の名前は${myProfile[0]}です。年齢は${myProfile[1]}です。`;
 // console.log(msg2);
-const [userName, userAge] = myProfile;
-const msg3 = `私の名前は${userName}です。年齢は${userAge}です。`;
-console.log(msg3);
+// const [userName, userAge] = myProfile;
+// const msg3 = `私の名前は${userName}です。年齢は${userAge}です。`;
+// console.log(msg3);
 
+// デフォルト値（引数、分割代入）
+const sayHello = (name="きんたろう") => console.log(`こんにちは、${name}さん`);
+sayHello("momotaro");
+sayHello();
+
+const myProfile = {
+  age: 30
+};
+const { age, name="momotaro" } = myProfile;
+console.log(age);
+console.log(name);
