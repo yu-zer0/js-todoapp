@@ -139,15 +139,48 @@
 // console.log(arr3);
 
 // 配列のコピー
-const arr4 = [10, 20];
-const arr5 = [30, 40];
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 // const arr6 = [...arr4];
 // console.log(arr6);
-const arr7 = [...arr4, ...arr5];
-console.log(arr7);
+// const arr7 = [...arr4, ...arr5];
+// console.log(arr7);
 
 // 以下のコピーの仕方はだめ
 // 参照受け渡しのため
-const arr8 = arr4;
-console.log(arr8);
+// const arr8 = arr4;
+// console.log(arr8);
 // arr8の中身を変更すると、arr4の中身も変わってしまう
+
+// mapやfilterを使った配列の処理
+// const nameArr = ["田中", "山田", "佐藤"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(nameArr[index]);
+// };
+
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+// console.log(nameArr2);
+
+// nameArr.map((name) => {
+//   console.log(name);
+// });
+
+// const numArr = [1, 2, 3, 4, 5];
+// const oddNumArr = numArr.filter((num) => {
+//   return num % 2 === 1;
+// });
+// oddNumArr.map((num) => console.log(num));
+const nameArr = ["田中", "山田", "佐藤"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(`${index+1}番目は${nameArr[index]}です。`);
+// };
+// nameArr.map((name, index) => {
+//   console.log(`${index+1}番目は${name}です。`);
+// });
+
+const newNameArr = nameArr.map((name) => {
+  return name === "佐藤" ? name+"さん" : name;
+});
+console.log(newNameArr);
