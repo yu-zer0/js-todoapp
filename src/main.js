@@ -110,13 +110,44 @@
 // console.log(msg3);
 
 // デフォルト値（引数、分割代入）
-const sayHello = (name="きんたろう") => console.log(`こんにちは、${name}さん`);
-sayHello("momotaro");
-sayHello();
+// const sayHello = (name="きんたろう") => console.log(`こんにちは、${name}さん`);
+// sayHello("momotaro");
+// sayHello();
 
-const myProfile = {
-  age: 30
-};
-const { age, name="momotaro" } = myProfile;
-console.log(age);
-console.log(name);
+// const myProfile = {
+//   age: 30
+// };
+// const { age, name="momotaro" } = myProfile;
+// console.log(age);
+// console.log(name);
+
+// スプレッド構文 ... これが一番使う
+// 配列の展開
+// const arr1 = [1, 2];
+// console.log(arr1);
+// console.log(...arr1);
+
+// const sumFunc = (num1, num2) => console.log(num1 + num2);
+// sumFunc(arr1[0], arr1[1]);
+// sumFunc(...arr1);
+
+//まとめる
+// const arr2 = [1, 2, 3, 4, 5];
+// const [num1, num2, ...arr3] = arr2;
+// console.log(num1);
+// console.log(num2);
+// console.log(arr3);
+
+// 配列のコピー
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+// const arr6 = [...arr4];
+// console.log(arr6);
+const arr7 = [...arr4, ...arr5];
+console.log(arr7);
+
+// 以下のコピーの仕方はだめ
+// 参照受け渡しのため
+const arr8 = arr4;
+console.log(arr8);
+// arr8の中身を変更すると、arr4の中身も変わってしまう
