@@ -71,22 +71,41 @@
 // hello("hello");
 
 // アロー関数
-const arrowfunc = (x,y) => {
-  return console.log(x+y);
-};
-arrowfunc(5,3);
+// const arrowfunc = (x,y) => {
+//   return console.log(x+y);
+// };
+// arrowfunc(5,3);
 
 // 引数が１つのときは（）を省略できる
-const echoMessage = str => {
-  return console.log(str);
-};
-echoMessage("Hello, World");
+// const echoMessage = str => {
+//   return console.log(str);
+// };
+// echoMessage("Hello, World");
 
 // Reactでよく使われる。オブジェクトを返すときの書き方
-const func = (num1, num2) => ({
-  hoge: num1,
-  fuga: num2
-});
+// const func = (num1, num2) => ({
+//   hoge: num1,
+//   fuga: num2
+// });
 
-console.log(func(10,30));
+// console.log(func(10,30));
+
+// 分割代入
+// const myProfile = {
+//   name: "ももたろう",
+//   age: 25
+// };
+// const msg = `私の名前は${myProfile.name}です。年齢は${myProfile.age}です。`;
+// console.log(msg);
+
+// const {name, age} = myProfile;
+// const msg1 = `私の名前は${name}です。年齢は${age}です。`;
+// console.log(msg1);
+
+const myProfile = ["ももたろう", 25];
+// const msg2 = `私の名前は${myProfile[0]}です。年齢は${myProfile[1]}です。`;
+// console.log(msg2);
+const [userName, userAge] = myProfile;
+const msg3 = `私の名前は${userName}です。年齢は${userAge}です。`;
+console.log(msg3);
 
