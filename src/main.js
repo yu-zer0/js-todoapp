@@ -41,11 +41,17 @@
 // val4.age = 30;
 // console.log(val4);
 
-const val5 = ["dog", "cat"];
-console.log(val5);
-console.log(val5[0]);
-console.log(val5[1]);
-val5[0] = "bird";
-val5.push("monkey");
-console.log(val5);
+// const val5 = ["dog", "cat"];
+// console.log(val5);
+// console.log(val5[0]);
+// console.log(val5[1]);
+// val5[0] = "bird";
+// val5.push("monkey");
+// console.log(val5);
+
+// テンプレート文字列
+const name = "ももたろう";
+const age = 25;
+const message = `私の名前は${name}です。年齢は${age}です。`;
+console.log(message);
 
